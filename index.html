@@ -1,0 +1,21 @@
+<body>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="assets/dictionary.css">
+  <script src="assets/polyfill.js"></script>
+  <script src="assets/dictionary.js"></script> 
+
+  <div id="dictionary">
+    <headword style="display: none;">not found</headword>
+    <ul></ul>
+  </div>
+
+  <script>
+    var query = getQuery();
+    if (query === "" || !query.match(/^[a-z ]+$/)) {
+      notFound();
+    } else {
+      requestDictionary(query);
+    }
+  </script>
+</body>

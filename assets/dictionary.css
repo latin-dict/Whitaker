@@ -1,0 +1,109 @@
+* {
+  font-family: Tahoma, Verdana, "Lucida Sans Unicode", sans-serif;
+  font-size: 13px;
+}
+
+body { margin: 0; }
+
+headword {
+  display: block;
+  font-weight: normal;
+  font-style: italic;
+  color: rgb(100, 100, 100);
+}
+
+span[type=lemma] { color: blue; font-weight: bold; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.inner {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 2em;
+}
+
+li[type=english] {
+  list-style: none;
+  color: #b61039;
+}
+
+li[type=command] {
+  list-style: none;
+  margin-top: 1em;
+}
+li[type=command] + li[type=command] { margin-top: 0; }
+
+span.pos {
+  color: green;
+}
+ul ul span.pos { font-style: normal; }
+
+span.lemma {
+  font-style: italic;
+  font-weight: bold;
+  color: darkblue;
+}
+
+span.gender {
+  font-style: normal;
+  color: black;
+}
+
+span.code {
+  font-style: normal;
+  color: black;
+}
+
+span.freq {
+  font-style: italic;
+  color: black;
+}
+
+span.form { color: black; }
+span.suffix { font-weight: bold; }
+
+span.grammar {
+  color: green;
+}
+
+/*
+ * Tooltip
+ * https://w3schoolsrus.github.io/howto/howto_css_tooltip.html
+ */
+ 
+.code {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.code .tooltiptext {
+  display: none;
+  background-color: #555;
+  color: #fff;
+  padding: 5px;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  top: 135%;
+  width: 20em;
+  margin-left: -10em;
+  left: 50%;
+
+  white-space: nowrap;
+}
+
+.code:hover .tooltiptext {
+  /*visibility: visible;*/
+  display: block;
+  opacity: 1;
+}
+
+.code .tooltiptext p {
+  margin: 0;
+  font-size: 0.8em;
+} 
